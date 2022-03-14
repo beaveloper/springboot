@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    group:
+      "local": "localRabbit"
+
+mq:
+  threadCnt: 4
+  maxThreadCnt: 10
+  exchange: beav.sample
+  routingKey: beav.sample.#
+  queue: sample.queue
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: localRabbit
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
