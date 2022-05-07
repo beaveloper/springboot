@@ -4,6 +4,12 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# 하위 모듈의 ignore 세팅
+*/.mvn/*
+*/mvnw
+*/mvnw.cmd
+*/.gitignore
+
 ### STS ###
 .apt_generated
 .classpath
