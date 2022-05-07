@@ -4,4 +4,10 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username:
+    url: jdbc:mysql://192.168.0.17:53307/auth?autoReconnect=true&characterEncoding=UTF-8&useTimezone=true&serverTimezone=Asia/Seoul
+    username: taemin
+    password:
+
+mybatis:
+  type-aliases-package: home.beav.auth.vo
+  mapper-locations: mapper/*.xml
